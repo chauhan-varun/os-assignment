@@ -7,7 +7,7 @@
 
 ## Requirements/Software Used
 * Ubuntu Linux (or WSL)
-* Python 3.x
+* Python 3.12.14
 * Visual Studio Code
 * `uv` (Python package manager)
 

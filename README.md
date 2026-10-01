@@ -18,7 +18,7 @@ A Python script demonstrating fundamental OS concepts, including:
 
 ### [2. OS Lab Environment Setup](./2)
 A Python verification script that confirms the presence and proper configuration of:
-- Python 3.x
+- Python 3.12.14
 - Ubuntu Linux / Windows Subsystem for Linux (WSL)
 - Visual Studio Code
 
