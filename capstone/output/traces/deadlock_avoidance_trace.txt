@@ -1,0 +1,10 @@
+=== DEADLOCK AVOIDANCE & DETECTION TRACES ===
+
+Initial State Safe: True
+Safe Sequence: ['P1', 'P3', 'P0', 'P2', 'P4']
+Work Progression History: [{'A': 3, 'B': 3, 'C': 2}, {'A': 5, 'B': 3, 'C': 2}, {'A': 7, 'B': 4, 'C': 3}, {'A': 7, 'B': 5, 'C': 3}, {'A': 10, 'B': 5, 'C': 5}, {'A': 10, 'B': 5, 'C': 7}]
+
+Evaluating Requests:
+Process P1 Request {'A': 1, 'B': 0, 'C': 2}: Granted=True | Granted: Request by P1 approved. Safe sequence: P1 -> P3 -> P0 -> P2 -> P4
+Process P4 Request {'A': 3, 'B': 3, 'C': 0}: Granted=False | Denied: Insufficient available resource A (3 requested, only 2 available). Process must wait.
+Process P0 Request {'A': 0, 'B': 2, 'C': 0}: Granted=False | Denied: Granting request by P0 results in an UNSAFE state. Allocation rolled back.

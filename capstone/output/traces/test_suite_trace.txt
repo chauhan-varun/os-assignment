@@ -1,0 +1,108 @@
+test_initial_state_safety (test_deadlock.TestDeadlockModule.test_initial_state_safety) ... [INFO] System is in SAFE state. Safe sequence: P1 -> P3 -> P0 -> P2 -> P4
+ok
+test_request_exceeding_available_denied (test_deadlock.TestDeadlockModule.test_request_exceeding_available_denied) ... [WARNING] Denied: Insufficient available resource A (4 requested, only 3 available). Process must wait.
+ok
+test_request_exceeding_need_denied (test_deadlock.TestDeadlockModule.test_request_exceeding_need_denied) ... [ERROR] Error: Process P1 exceeded maximum need for A (5 > 1).
+ok
+test_request_leading_to_unsafe_state_rejected (test_deadlock.TestDeadlockModule.test_request_leading_to_unsafe_state_rejected) ... [WARNING] System is in an UNSAFE state! Deadlocked/Blocked processes: P0, P1, P2, P3, P4
+[WARNING] Denied: Granting request by P4 results in an UNSAFE state. Allocation rolled back.
+ok
+test_valid_request_grant (test_deadlock.TestDeadlockModule.test_valid_request_grant) ... [INFO] System is in SAFE state. Safe sequence: P1 -> P3 -> P0 -> P2 -> P4
+[INFO] Granted: Request by P1 approved. Safe sequence: P1 -> P3 -> P0 -> P2 -> P4
+ok
+test_wfg_cycle_detection (test_deadlock.TestDeadlockModule.test_wfg_cycle_detection) ... [INFO] No deadlock detected in Wait-For Graph.
+[WARNING] Deadlock detected! Cycles: [['P1', 'P2', 'P3', 'P1']]
+ok
+test_full_benchmark_pipeline (test_integrated.TestIntegratedSystem.test_full_benchmark_pipeline) ... [INFO] FCFS executed: 5 processes, Total Time: 28, Avg WT: 11.40
+[INFO] SJF Non-Preemptive executed: Avg WT: 8.20
+[INFO] SRTF executed: Avg WT: 6.60
+[INFO] Priority Non-Preemptive executed: Avg WT: 10.60
+[INFO] Priority Preemptive executed: Avg WT: 9.60
+[INFO] Round Robin (Q=2) executed: Avg WT: 13.00
+[INFO] Round Robin (Q=4) executed: Avg WT: 13.00
+[INFO] Contiguous Allocation [First-Fit]: 3 allocated, 1 unallocated.
+[INFO] Contiguous Allocation [Best-Fit]: 4 allocated, 0 unallocated.
+[INFO] Contiguous Allocation [Worst-Fit]: 3 allocated, 1 unallocated.
+[INFO] Page Replacement [FIFO]: Faults=15, Hits=5, Fault Ratio=75.00%
+[INFO] Page Replacement [LRU]: Faults=12, Hits=8, Fault Ratio=60.00%
+[INFO] Page Replacement [Optimal]: Faults=9, Hits=11, Fault Ratio=45.00%
+[INFO] Page Replacement [LFU]: Faults=13, Hits=7, Fault Ratio=65.00%
+[INFO] Page Replacement [FIFO]: Faults=10, Hits=10, Fault Ratio=50.00%
+[INFO] Page Replacement [LRU]: Faults=8, Hits=12, Fault Ratio=40.00%
+[INFO] Page Replacement [Optimal]: Faults=8, Hits=12, Fault Ratio=40.00%
+[INFO] Page Replacement [LFU]: Faults=8, Hits=12, Fault Ratio=40.00%
+[INFO] Page Replacement [FIFO]: Faults=9, Hits=11, Fault Ratio=45.00%
+[INFO] Page Replacement [LRU]: Faults=7, Hits=13, Fault Ratio=35.00%
+[INFO] Page Replacement [Optimal]: Faults=7, Hits=13, Fault Ratio=35.00%
+[INFO] Page Replacement [LFU]: Faults=7, Hits=13, Fault Ratio=35.00%
+[INFO] System is in SAFE state. Safe sequence: P1 -> P3 -> P0 -> P2 -> P4
+[INFO] System is in SAFE state. Safe sequence: P1 -> P3 -> P0 -> P2 -> P4
+[INFO] Granted: Request by P1 approved. Safe sequence: P1 -> P3 -> P0 -> P2 -> P4
+[WARNING] Denied: Insufficient available resource A (3 requested, only 2 available). Process must wait.
+[WARNING] System is in an UNSAFE state! Deadlocked/Blocked processes: P0, P1, P2, P3, P4
+[WARNING] Denied: Granting request by P0 results in an UNSAFE state. Allocation rolled back.
+[INFO] No deadlock detected in Wait-For Graph.
+[WARNING] Deadlock detected! Cycles: [['P2', 'P3', 'P4', 'P2']]
+[INFO] Contiguous allocated system.log: blocks [0, 1, 2, 3]
+[INFO] Contiguous allocated kernel.bin: blocks [4, 5, 6, 7, 8, 9]
+[INFO] Linked allocated user_data.csv: blocks [10, 11, 12, 13, 14]
+[INFO] Indexed allocated database.db: Index block 15, Data blocks [16, 17, 18, 19]
+[INFO] Deleted file system.log, freed blocks.
+[INFO] Contiguous allocated audit.txt: blocks [20, 21, 22, 23, 24]
+ok
+test_best_fit_allocation (test_memory.TestMemoryManager.test_best_fit_allocation) ... [INFO] Contiguous Allocation [Best-Fit]: 4 allocated, 0 unallocated.
+ok
+test_first_fit_allocation (test_memory.TestMemoryManager.test_first_fit_allocation) ... [INFO] Contiguous Allocation [First-Fit]: 3 allocated, 1 unallocated.
+ok
+test_invalid_block_sizes (test_memory.TestMemoryManager.test_invalid_block_sizes) ... ok
+test_invalid_requests (test_memory.TestMemoryManager.test_invalid_requests) ... ok
+test_worst_fit_allocation (test_memory.TestMemoryManager.test_worst_fit_allocation) ... [INFO] Contiguous Allocation [Worst-Fit]: 3 allocated, 1 unallocated.
+ok
+test_empty_reference_string (test_memory.TestPageReplacement.test_empty_reference_string) ... ok
+test_fifo_page_replacement (test_memory.TestPageReplacement.test_fifo_page_replacement) ... [INFO] Page Replacement [FIFO]: Faults=15, Hits=5, Fault Ratio=75.00%
+ok
+test_invalid_frames (test_memory.TestPageReplacement.test_invalid_frames) ... ok
+test_lfu_page_replacement (test_memory.TestPageReplacement.test_lfu_page_replacement) ... [INFO] Page Replacement [LFU]: Faults=13, Hits=7, Fault Ratio=65.00%
+ok
+test_lru_page_replacement (test_memory.TestPageReplacement.test_lru_page_replacement) ... [INFO] Page Replacement [LRU]: Faults=12, Hits=8, Fault Ratio=60.00%
+ok
+test_optimal_page_replacement (test_memory.TestPageReplacement.test_optimal_page_replacement) ... [INFO] Page Replacement [Optimal]: Faults=9, Hits=11, Fault Ratio=45.00%
+ok
+test_single_frame_boundary (test_memory.TestPageReplacement.test_single_frame_boundary) ... [INFO] Page Replacement [FIFO]: Faults=4, Hits=0, Fault Ratio=100.00%
+ok
+test_cpu_idle_gap (test_scheduler.TestCPUScheduler.test_cpu_idle_gap) ... [INFO] FCFS executed: 2 processes, Total Time: 13, Avg WT: 0.00
+ok
+test_empty_workload (test_scheduler.TestCPUScheduler.test_empty_workload) ... ok
+test_fcfs_valid (test_scheduler.TestCPUScheduler.test_fcfs_valid) ... [INFO] FCFS executed: 3 processes, Total Time: 16, Avg WT: 3.33
+ok
+test_invalid_round_robin_quantum (test_scheduler.TestCPUScheduler.test_invalid_round_robin_quantum) ... ok
+test_negative_arrival_time (test_scheduler.TestCPUScheduler.test_negative_arrival_time) ... ok
+test_priority_scheduling (test_scheduler.TestCPUScheduler.test_priority_scheduling) ... [INFO] Priority Non-Preemptive executed: Avg WT: 3.33
+[INFO] Priority Preemptive executed: Avg WT: 3.00
+ok
+test_round_robin_valid (test_scheduler.TestCPUScheduler.test_round_robin_valid) ... [INFO] Round Robin (Q=2) executed: Avg WT: 6.00
+ok
+test_single_process (test_scheduler.TestCPUScheduler.test_single_process) ... [INFO] FCFS executed: 1 processes, Total Time: 15, Avg WT: 0.00
+ok
+test_sjf_non_preemptive_valid (test_scheduler.TestCPUScheduler.test_sjf_non_preemptive_valid) ... [INFO] SJF Non-Preemptive executed: Avg WT: 3.33
+ok
+test_srtf_preemptive_valid (test_scheduler.TestCPUScheduler.test_srtf_preemptive_valid) ... [INFO] SRTF executed: Avg WT: 3.00
+ok
+test_zero_or_negative_burst_time (test_scheduler.TestCPUScheduler.test_zero_or_negative_burst_time) ... ok
+test_c_scan_and_c_look (test_storage.TestStorageModule.test_c_scan_and_c_look) ... ok
+test_fcfs_disk_scheduling (test_storage.TestStorageModule.test_fcfs_disk_scheduling) ... ok
+test_file_system_allocation (test_storage.TestStorageModule.test_file_system_allocation) ... [INFO] Contiguous allocated f1.txt: blocks [0, 1, 2, 3]
+[INFO] Linked allocated f2.txt: blocks [4, 5, 6]
+[INFO] Indexed allocated f3.txt: Index block 7, Data blocks [8, 9]
+[INFO] Deleted file f1.txt, freed blocks.
+ok
+test_file_system_errors (test_storage.TestStorageModule.test_file_system_errors) ... [INFO] Contiguous allocated f1.txt: blocks [0, 1, 2, 3]
+ok
+test_invalid_disk_requests (test_storage.TestStorageModule.test_invalid_disk_requests) ... ok
+test_scan_and_look (test_storage.TestStorageModule.test_scan_and_look) ... ok
+test_sstf_disk_scheduling (test_storage.TestStorageModule.test_sstf_disk_scheduling) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.021s
+
+OK

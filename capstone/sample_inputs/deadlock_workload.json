@@ -1,0 +1,40 @@
+{
+  "description": "Multi-resource banker's algorithm state and RAG graph",
+  "bankers_state": {
+    "resources": ["A", "B", "C"],
+    "total_system_resources": {"A": 10, "B": 5, "C": 7},
+    "available": {"A": 3, "B": 3, "C": 2},
+    "max_claim": {
+      "P0": {"A": 7, "B": 5, "C": 3},
+      "P1": {"A": 3, "B": 2, "C": 2},
+      "P2": {"A": 9, "B": 0, "C": 2},
+      "P3": {"A": 2, "B": 2, "C": 2},
+      "P4": {"A": 4, "B": 3, "C": 3}
+    },
+    "allocation": {
+      "P0": {"A": 0, "B": 1, "C": 0},
+      "P1": {"A": 2, "B": 0, "C": 0},
+      "P2": {"A": 3, "B": 0, "C": 2},
+      "P3": {"A": 2, "B": 1, "C": 1},
+      "P4": {"A": 0, "B": 0, "C": 2}
+    },
+    "sample_requests": [
+      {"pid": "P1", "request": {"A": 1, "B": 0, "C": 2}},
+      {"pid": "P4", "request": {"A": 3, "B": 3, "C": 0}},
+      {"pid": "P0", "request": {"A": 0, "B": 2, "C": 0}}
+    ]
+  },
+  "wait_for_graph_cases": {
+    "deadlock_free": {
+      "P1": ["P2"],
+      "P2": ["P3"],
+      "P3": []
+    },
+    "deadlocked_cycle": {
+      "P1": ["P2"],
+      "P2": ["P3"],
+      "P3": ["P4"],
+      "P4": ["P2"]
+    }
+  }
+}

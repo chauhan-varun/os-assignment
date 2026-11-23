@@ -1,0 +1,20 @@
+=== DISK SCHEDULING & FILE SYSTEM TRACES ===
+
+FCFS: Total Head Movement=640, Avg Seek=80.00
+Seek Sequence: [53, 98, 183, 37, 122, 14, 124, 65, 67]
+
+SSTF: Total Head Movement=236, Avg Seek=29.50
+Seek Sequence: [53, 65, 67, 37, 14, 98, 122, 124, 183]
+
+SCAN: Total Head Movement=331, Avg Seek=41.38
+Seek Sequence: [53, 65, 67, 98, 122, 124, 183, 199, 37, 14]
+
+C-SCAN: Total Head Movement=382, Avg Seek=47.75
+Seek Sequence: [53, 65, 67, 98, 122, 124, 183, 199, 0, 14, 37]
+
+LOOK: Total Head Movement=299, Avg Seek=37.38
+Seek Sequence: [53, 65, 67, 98, 122, 124, 183, 37, 14]
+
+C-LOOK: Total Head Movement=322, Avg Seek=40.25
+Seek Sequence: [53, 65, 67, 98, 122, 124, 183, 14, 37]
+

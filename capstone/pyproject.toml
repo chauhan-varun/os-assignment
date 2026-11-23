@@ -1,0 +1,10 @@
+[project]
+name = "sim-os-capstone"
+version = "1.0.0"
+description = "SIM-OS: Integrated Operating System Resource Management Simulator"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "matplotlib>=3.5.0",
+    "numpy>=1.20.0",
+]

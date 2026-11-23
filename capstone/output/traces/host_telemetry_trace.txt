@@ -1,0 +1,43 @@
+[34m[1m========================================================================[0m
+[36m[1m       SIM-OS REAL-TIME HOST LINUX TELEMETRY & SYSTEM PROBE             [0m
+[34m[1m========================================================================[0m
+
+[32m[1m[1] Kernel & Architecture Diagnostics[0m
+  • OS Platform     : Linux
+  • Kernel Release  : 7.3.5-arch1-1
+  • Architecture    : x86_64
+  • Hostname        : varun
+  • Uptime          : up 3 hours, 34 minutes
+
+[32m[1m[2] CPU Topology & Utilization (/proc/cpuinfo)[0m
+  • Processor Model : Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz
+  • Logical Cores   : 8
+  • Load Average    : 1m=4.53, 5m=3.90, 15m=2.97
+
+[32m[1m[3] Memory & Swapping Diagnostics (/proc/meminfo)[0m
+  • Total Physical RAM : 15828.34 MB
+  • Free Memory        : 6419.64 MB
+  • Available Memory   : 11297.12 MB
+  • Total Swap Space   : 4096.00 MB
+  • Free Swap Space    : 4096.00 MB
+
+[32m[1m[4] Process Table Summary (POSIX PID Snapshot)[0m
+  • Active Processes : 246
+  • Running (State R): 2
+
+  [33mTop 5 Processes by Memory Usage:[0m
+  PID      USER       %CPU     %MEM     COMMAND             
+  15678    varun      13.8     4.8      brave               
+  19497    varun      141      4.6      brave               
+  18799    varun      13.0     3.0      antigravity-ide     
+  15724    varun      13.3     2.7      brave               
+  16944    varun      2.8      2.4      brave               
+
+[32m[1m[5] Storage & Mount Points (df -h)[0m
+  Filesystem           Size       Used       Avail      Use%   Mounted on     
+  /dev/sda2            232G       186G       35G        85%    /              
+  efivarfs             150K       86K        60K        60%    /sys/firmware/efi/efivars
+  /dev/sda1            2.0G       289M       1.8G       15%    /efi           
+
+[34m[1m========================================================================[0m
+

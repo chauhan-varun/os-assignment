@@ -1,0 +1,16 @@
+{
+  "description": "Benchmark workload for contiguous memory allocation and page replacement",
+  "contiguous_allocation": {
+    "block_sizes_kb": [100, 500, 200, 300, 600],
+    "process_requests": [
+      {"pid": "P1", "size_kb": 212},
+      {"pid": "P2", "size_kb": 417},
+      {"pid": "P3", "size_kb": 112},
+      {"pid": "P4", "size_kb": 426}
+    ]
+  },
+  "page_replacement": {
+    "reference_string": [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1],
+    "test_frame_capacities": [3, 4, 5]
+  }
+}

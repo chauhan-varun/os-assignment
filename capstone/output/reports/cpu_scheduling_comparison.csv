@@ -1,0 +1,8 @@
+Algorithm,Avg_TAT,Avg_WT,Avg_RT,CPU_Utilization_%,Throughput
+FCFS,17.00,11.40,11.40,100.00,0.1786
+SJF (Non-Preemptive),13.80,8.20,8.20,100.00,0.1786
+SRTF (Preemptive SJF),12.20,6.60,4.40,100.00,0.1786
+Priority (Non-Preemptive),16.20,10.60,10.60,100.00,0.1786
+Priority (Preemptive),15.20,9.60,7.80,100.00,0.1786
+Round Robin (Q=2),18.60,13.00,2.80,100.00,0.1786
+Round Robin (Q=4),18.60,13.00,6.00,100.00,0.1786

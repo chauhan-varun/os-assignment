@@ -1,0 +1,20 @@
+{
+  "description": "Disk head track requests and file allocation workload",
+  "disk_scheduling": {
+    "total_cylinders": 200,
+    "initial_head_position": 53,
+    "direction": "right",
+    "request_queue": [98, 183, 37, 122, 14, 124, 65, 67]
+  },
+  "file_allocation": {
+    "total_disk_blocks": 32,
+    "operations": [
+      {"op": "create", "type": "contiguous", "name": "system.log", "blocks": 4},
+      {"op": "create", "type": "contiguous", "name": "kernel.bin", "blocks": 6},
+      {"op": "create", "type": "linked", "name": "user_data.csv", "blocks": 5},
+      {"op": "create", "type": "indexed", "name": "database.db", "blocks": 4},
+      {"op": "delete", "name": "system.log"},
+      {"op": "create", "type": "contiguous", "name": "audit.txt", "blocks": 5}
+    ]
+  }
+}

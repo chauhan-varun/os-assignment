@@ -27,6 +27,7 @@
 - [Experiment 16: Direct, Indexed Access and Directory Structures](#experiment-16-direct-indexed-access-and-directory-structures)
 - [Experiment 17: Contiguous, Linked and Indexed Allocation](#experiment-17-contiguous-linked-and-indexed-allocation)
 - [Experiment 18: Free-Space Management, Deletion and Access Control](#experiment-18-free-space-management-deletion-and-access-control)
+- [Capstone Project: SIM-OS Integrated Resource Management Simulator (100 Marks)](./capstone/README.md)
 
 ---
 

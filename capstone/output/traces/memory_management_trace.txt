@@ -1,0 +1,41 @@
+=== MEMORY MANAGEMENT STEP-BY-STEP TRACES ===
+
+Algorithm: First-Fit
+Allocated: [('P1', 212, 1), ('P2', 417, 4), ('P3', 112, 2)]
+Unallocated: [('P4', 426)]
+Int Frag: 559 KB, Util: 43.6%
+
+Algorithm: Best-Fit
+Allocated: [('P1', 212, 3), ('P2', 417, 1), ('P3', 112, 2), ('P4', 426, 4)]
+Unallocated: []
+Int Frag: 433 KB, Util: 68.6%
+
+Algorithm: Worst-Fit
+Allocated: [('P1', 212, 4), ('P2', 417, 1), ('P3', 112, 3)]
+Unallocated: [('P4', 426)]
+Int Frag: 659 KB, Util: 43.6%
+
+--- Page Replacement Trace (FIFO & LRU, 3 Frames) ---
+FIFO Steps:
+Step  1 | Page 7 | Frames: [7, None, None] | Fault: True | Evicted: None
+Step  2 | Page 0 | Frames: [7, 0, None] | Fault: True | Evicted: None
+Step  3 | Page 1 | Frames: [7, 0, 1] | Fault: True | Evicted: None
+Step  4 | Page 2 | Frames: [2, 0, 1] | Fault: True | Evicted: 7
+Step  5 | Page 0 | Frames: [2, 0, 1] | Fault: False | Evicted: None
+Step  6 | Page 3 | Frames: [2, 3, 1] | Fault: True | Evicted: 0
+Step  7 | Page 0 | Frames: [2, 3, 0] | Fault: True | Evicted: 1
+Step  8 | Page 4 | Frames: [4, 3, 0] | Fault: True | Evicted: 2
+Step  9 | Page 2 | Frames: [4, 2, 0] | Fault: True | Evicted: 3
+Step 10 | Page 3 | Frames: [4, 2, 3] | Fault: True | Evicted: 0
+Step 11 | Page 0 | Frames: [0, 2, 3] | Fault: True | Evicted: 4
+Step 12 | Page 3 | Frames: [0, 2, 3] | Fault: False | Evicted: None
+Step 13 | Page 2 | Frames: [0, 2, 3] | Fault: False | Evicted: None
+Step 14 | Page 1 | Frames: [0, 1, 3] | Fault: True | Evicted: 2
+Step 15 | Page 2 | Frames: [0, 1, 2] | Fault: True | Evicted: 3
+Step 16 | Page 0 | Frames: [0, 1, 2] | Fault: False | Evicted: None
+Step 17 | Page 1 | Frames: [0, 1, 2] | Fault: False | Evicted: None
+Step 18 | Page 7 | Frames: [7, 1, 2] | Fault: True | Evicted: 0
+Step 19 | Page 0 | Frames: [7, 0, 2] | Fault: True | Evicted: 1
+Step 20 | Page 1 | Frames: [7, 0, 1] | Fault: True | Evicted: 2
+Total Faults: 15, Hits: 5
+
