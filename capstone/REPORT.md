@@ -210,6 +210,23 @@ SIM-OS provides two primary operating modes:
 - **Analytical Charts**: Saved in `output/charts/` (`cpu_scheduling_comparison.png`, `page_replacement_faults.png`, etc.).
 - **Audit Logs**: Persisted in `logs/sim_os.log`.
 
+### 5.3 System Demonstration Figures & Screenshots
+
+#### Figure 1: Main Menu Interface
+![Figure 1: Main Menu](output/screenshots/figure1_main_menu.png)
+
+#### Figure 2: CPU Scheduling Input and Output (Gantt & Metrics)
+![Figure 2: CPU Scheduling Input and Output](output/screenshots/figure2_cpu_scheduling.png)
+
+#### Figure 3: Memory Partitioning and Banker's Deadlock Avoidance
+![Figure 3: Memory Partitioning and Banker's Deadlock Avoidance](output/screenshots/figure3_memory_deadlock_storage.png)
+
+#### Figure 4: Benchmark Charts and Comparison Analytics
+![Figure 4: Comparative Benchmark Visualizations](output/screenshots/figure4_benchmark_charts.png)
+
+#### Figure 5: Test Summary and Invalid-Input Handling Verification
+![Figure 5: Test Summary & Exception Handling Verification](output/screenshots/figure5_test_summary_error_handling.png)
+
 ---
 
 ## Conclusion
